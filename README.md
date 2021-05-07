@@ -1,0 +1,1 @@
+# FrontendMentor__FAQ-accordion
