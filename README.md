@@ -25,18 +25,18 @@ Users should be able to:
 - Readings the questions
 - Close/Open the next question by clicking on that
 
-### Screenshot !
+### Screenshot
 
 ![](./images/ScreenShot.jpg)
 
-### Links !
+### Links
 
 - Solution URL: [Solution](https://www.frontendmentor.io/solutions/htmlandcss-javascript-faq-component-mluOgfvAf)
 - Live Site URL: [Live](https://grifano.github.io/FrontendMentor__FAQ-accordion/)
 
-## My process !
+## My process
 
-### Built with !
+### Built with
 
 - Semantic HTML5 markup
 - JavaScript
@@ -45,7 +45,7 @@ Users should be able to:
 - Responsive images
 - Responsive Website
 
-### What I learned !
+### What I learned
 
 Using "picture" tag, browser know what image should to load depending on viewport width 😀
 
@@ -105,7 +105,7 @@ function setActiveTab(tab) {
 
 I want to continue to learn a JavaScript. Currently, I'm working on Course from Udemy. App Brewery Web Developer Bootcamp. And to do practice, practice and practice one more 😉
 
-### Useful resources !
+### Useful resources
 
 ["Creating Accordion with Javascript"](https://medium.com/@vikash20186/creating-accordion-with-javascript-a33743655474)
 
