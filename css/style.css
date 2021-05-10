@@ -27,8 +27,7 @@ ul {
 }
 /*** Main Styles ***/
 .faq {
-	padding: 60px 0;
-	margin: 0 20px;
+	margin: 0 100px;
 	background-color: #ffffff;
 	position: relative;
 	border-radius: 20px;
@@ -36,31 +35,40 @@ ul {
 }
 .faq__row {
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 }
 .faq__column {
 	flex: 1 0 50%;
 }
 .images {
 	overflow: hidden;
+	padding-top: 180px;
+	background-size: 180%;
+	background-image: url("../images/bg-pattern-desktop.svg");
+	background-repeat: no-repeat;
+	background-position: 120% 70%;
 }
 .images--image-big {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
 	position: relative;
 	left: -78px;
+	bottom: 78px;
 }
 .images--image-big img {
 	display: block;
-	width: 100%;
-	height: 100%;
+	max-width: 100%;
 	object-fit: cover;
 }
 
 .images--image-small {
 	position: absolute;
-	top: 192px;
-	left: -122px;
-	width: 170px;
-	height: 170px;
+	top: 222px;
+	left: -140px;
+}
+.faq__content {
+	padding: 60px 40px 0;
 }
 .faq__title {
 	color: hsl(237, 12%, 33%);
@@ -71,7 +79,6 @@ ul {
 }
 .accordion {
 	max-width: 350px;
-	margin-right: 90px;
 }
 .accordion__item {
 	color: hsl(240, 6%, 50%);
@@ -154,28 +161,50 @@ ul {
 	background-color: #0061cc;
 }
 /**** Media Queries ****/
-@media (max-width: 799px) {
-	.main-page {
-		margin: 0 10px;
-	}
+@media (max-width: 991px) {
 	.faq {
-		padding: 130px 20px 50px;
+		margin: 0 20px;
 	}
+	.faq__content {
+		padding: 60px 10px 40px;
+	}
+}
+@media (max-width: 799px) {
 	.accordion {
 		margin: 0;
+	}
+	.faq {
+		margin: 120px 20px 30px;
 	}
 	.faq__row {
 		flex-direction: column;
 	}
+	.images {
+		height: 120px;
+		overflow: visible;
+		padding-top: 0;
+		background-size: auto;
+		background-image: url("../images/bg-pattern-mobile.svg");
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		text-align: center;
+	}
+	.images--image-big {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		position: static;
+	}
+	.images--image-big {
+		position: relative;
+		left: -16px;
+		top: -111px;
+	}
 	.images--image-small {
 		display: none;
 	}
-	.images--image-big {
-		width: 80%;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translate(-55%, -54%);
+	.faq__content {
+		padding: 20px 20px 60px;
 	}
 	.faq__title {
 		text-align: center;
