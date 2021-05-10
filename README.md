@@ -27,18 +27,19 @@ Users should be able to:
 
 ### Screenshot !
 
-![](./images/StatsPreviewCard-min.jpg)
+![](./images/ScreenShot.jpg)
 
 ### Links !
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/html5andcss3-OY-0qrLfJ)
-- Live Site URL: [Live](https://grifano.github.io/FrontendMentor__StatsPreviewCard/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/htmlandcss-javascript-faq-component-mluOgfvAf)
+- Live Site URL: [Live](https://grifano.github.io/FrontendMentor__FAQ-accordion/)
 
 ## My process !
 
 ### Built with !
 
 - Semantic HTML5 markup
+- JavaScript
 - CSS custom properties
 - Flexbox
 - Responsive images
@@ -55,19 +56,50 @@ Using "picture" tag, browser know what image should to load depending on viewpor
 	<img src="images/image-header-desktop.jpg" alt="people working in workspace">
 </picture>
 ```
-Thanks to this code, I was able to make the image responsive and look good on different screen size
+I decide to create a custom arrow for tab headers Instead to use a svg. But I was wondering is that very complicated? Off Course a easy way is to use svg as a background image
 ```css
-.card-preview__image img {
-	max-width: 100%;
-	min-height: 100%;
-	object-fit: cover;
+.accordion__header::before,
+.accordion__header::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 6px;
+	height: 1px;
+	top: 50%;
+	right: 0;
+	background-color: hsl(14, 88%, 65%);
+}
+.accordion__header::before {
+	right: 4px;
+	transform: rotate(45deg);
+}
+.accordion__header::after {
+	transform: rotate(-45deg);
+}
+.accordion__header::before {
+	transform: rotate(45deg);
 }
 ```
-<!-- ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+Using the loop for addEventListner for each headin of faq
+```js
+	for (var i = 0; i < accordionTabHeaders.length; i++) {
+		accordionTabHeaders[i].addEventListener('click', function (event) {
+			setActiveTab(event.currentTarget);
+			showContent(event.currentTarget);
+		})
+	}
+```
+And this part is not clearly Understand For me. Why in if condition don't use an equal operator? It supposes if activeTab is true then run a code, but why activeTab Should be "true"? 
+```js
+function setActiveTab(tab) {
+	var activeTab = document.getElementById('accordion').querySelector('.active');
+	if (activeTab) {
+		activeTab.classList.remove('active');
+	};
+	// if not, add active class
+	tab.classList.add('active');
 }
-``` -->
+```
 
 ### Continued development
 
@@ -75,8 +107,8 @@ I want to continue to learn a JavaScript. Currently, I'm working on Course from 
 
 ### Useful resources !
 
-- [StackOverflow - Background overlap](https://stackoverflow.com/questions/24152869/make-background-color-overlap-background-image-without-extra-html) - This helped me for applying background overlap for image block.
-- [StackOverflow - Responsive image resize](https://stackoverflow.com/questions/11757537/css-image-size-how-to-fill-but-not-stretch) - Here I learn how use an "object-fit" property. 
+["Creating Accordion with Javascript"](https://medium.com/@vikash20186/creating-accordion-with-javascript-a33743655474)
+
 
 ## Author
 
@@ -85,4 +117,6 @@ I want to continue to learn a JavaScript. Currently, I'm working on Course from 
 - Twitter - [@Grifano](https://twitter.com/OrlenkoSerhii)
 - LinkedIn - [@Grifano](https://www.linkedin.com/in/serhii-orlenko-44aaa4a3/)
 
-<!-- ## Acknowledgments -->
+## Acknowledgments
+
+To [Vikash Agarwal](https://medium.com/@vikash20186) for his amazing post that helps me with Accordion.
