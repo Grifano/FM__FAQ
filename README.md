@@ -1,4 +1,4 @@
-# Frontend Mentor - Stats preview card component solution
+# Frontend Mentor -  FAQ accordion
 
 This is a solution to the [build out a FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam/hub/faq-accordion-card-iXayDDWmd). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
